@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: black;
+    
+} 
+
+body{
+    background-color: #fafafa;
+}
+
+#nav-horiz {
+
+    width: 100%;
+    background-color: white;
+    border-bottom: solid rgb(207, 207, 207) 1px;
+
+}
+
+.menu-horiz {
+    height: 60px;
+    font-size: 0.8rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.menu-horiz__item {
+    padding:20px;
+    color: red;
+    text-decoration: none;
+    display: block;
+}
+
+#recherche {
+    width: 500px;
+}
+
+#format-loupe {
+    width: 18px;
+    border: solid 1px grey;
+    background-color: rgb(219, 219, 219);
+}
+
+section {
+    margin-left : 50px;
+    margin-top: 30px;
+}
+
+#conteneur {
+	display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.title {
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-bottom: solid 2px black;
+
+}
+
+.colonne-video {
+    margin-left: 50px;
+}
+
+.element {
+	display: flex;
+    flex-direction: column;
+	align-items: flex-start;
+    margin-bottom: 10px;
+
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.2rem;
+    width: 800px;
+    margin: 2px;
+
+}
+
+.video {
+    width: 100%;
+    margin: 2px;
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+.to-follow {
+    margin-left: 10px;
+}
+
+#following-video {
+    padding-bottom: 20px; 
+}
+
+.format-video-main {
+    width: 800px;
+    height: 450px;
+}
+
+
+.format-video {
+    width: 213px;
+    height: 120px;
+}
+
+#logo {
+    width: 60px;
+    align-items: top;
+}

@@ -1,0 +1,8 @@
+com\mytube\servlet\HomeServlet.class
+com\mytube\servlet\Video.class
+com\mytube\servlet\VideoFormCreateServlet.class
+com\mytube\servlet\VideoRepository.class
+com\mytube\servlet\Commentary.class
+com\mytube\servlet\HibernateUtils.class
+com\mytube\servlet\User.class
+com\mytube\servlet\VideoServlet.class
