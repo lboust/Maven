@@ -16,7 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/home")
 public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
+	VideoRepository videoRepo = null; 
+	
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -35,9 +37,9 @@ public class HomeServlet extends HttpServlet {
 		
 		String pathInfo= request.getPathInfo();
 		
-		VideoRepository videoRepo = new VideoRepository();
-		/*
-	List<Video> videoList = new ArrayList<>();
+		if (videoRepo == null) videoRepo = new VideoRepository();
+		
+		List<Video> videoList = new ArrayList<>();
 		videoList = videoRepo.findAllVideos();
 		request.setAttribute("allVideoList", videoList);
 		
@@ -47,9 +49,9 @@ public class HomeServlet extends HttpServlet {
 		
 		List<Video> recommendedVideoList = new ArrayList<>();
 		recommendedVideoList = videoRepo.findRecommended();
-		request.setAttribute("recommendedVideoList", recommendedVideoList);*/
+		request.setAttribute("recommendedVideoList", recommendedVideoList);
 		
-		
+		//if (videoRepo != null) videoRepo.close();
 		
 		if (pathInfo == null ) {
 			this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);

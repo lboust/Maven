@@ -21,7 +21,7 @@ import org.hibernate.SessionFactory;
 @WebServlet("/player")
 public class VideoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	VideoRepository videoRepo = null;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -40,21 +40,16 @@ public class VideoServlet extends HttpServlet {
 		
 		String pathInfo = request.getPathInfo();
 		
-		VideoRepository videoRepo = new VideoRepository();
-		
-		Video currentVideo=videoRepo.findVideoById(6);
+		if (videoRepo == null) videoRepo = new VideoRepository();
+		Video currentVideo=videoRepo.findVideoById(8);
 		request.setAttribute("currentVideo", currentVideo);
-/*		SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
-		Session session = sessionFactory.openSession();	
-			session.getTransaction().begin();
-				Video currentVideo = session.find(Video.class, 6);
-			session.getTransaction().commit();
-		session.close();
-	sessionFactory.close();
-	request.setAttribute("currentVideo", currentVideo);
-*/
-
 		
+
+		List<Video> videoList = new ArrayList<>();
+		videoList = videoRepo.findAllOtherVideos(8);
+		request.setAttribute("allOtherVideosList", videoList);
+		
+		//videoRepo.close();
 		
 		if (pathInfo == null) {
 			this.getServletContext().getRequestDispatcher("/WEB-INF/VideoWithHibernate.jsp").forward(request, response);

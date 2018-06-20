@@ -51,7 +51,7 @@ body{
 
 #nav-verti {
 
-    position: fixed;
+  /*   position: fixed; */
     float : left;
     text-decoration: none;
     background-color: #f1f1f1;

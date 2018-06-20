@@ -32,12 +32,12 @@
             <div class="colonne-video">
                 <div class="element" >    
                     <div>
-                        <iframe class="format-video-main" src="${currentVideo.url}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>                          
+                        <video controls autoplay="true" src="videos/${currentVideo.title}.mp4"></video>                          
                     </div>
                     <div class="title"> 
                             <h2>${currentVideo.title}</h2>
                     </div>
-                    <div>
+                    <div id="comment">
                     ${currentVideo.description}
                     </div>                  
                     
@@ -46,8 +46,17 @@
             </div>
 
             <div class="to-follow">
-                <div id="following-video">
-                        <p>A suivre</p>   
+                <c:forEach items="${allOtherVideosList}" var="item">
+	   				<div class="following-video">   
+		                    <div class="format-video">
+		                        <video controls src="videos/${item.title}.mp4"} poster="${item.capture}" width="213"></video>                          
+		                    </div>
+		                    <div class="title"> 
+		                            <h2>${item.title}</h2>
+		                    </div>                 	                               
+	                </div>
+				</c:forEach>
+                
 
             </div>
 

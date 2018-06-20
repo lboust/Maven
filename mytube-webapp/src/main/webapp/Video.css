@@ -36,10 +36,12 @@ body{
     color: red;
     text-decoration: none;
     display: block;
+    justify-content: space-evenly;
+
 }
 
 #recherche {
-    width: 500px;
+    width: 300px;
 }
 
 #format-loupe {
@@ -61,13 +63,23 @@ section {
 .title {
     width: 90%;
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     border-bottom: solid 2px black;
+
+}
+.to-follow .title {
+    
+    font-size: 0.8rem;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: solid 2px black;
+    width: 400px;
 
 }
 
 .colonne-video {
-    margin-left: 50px;
+    margin-left: 10px;
+    width: 1000px;
 }
 
 .element {
@@ -99,11 +111,13 @@ h2 {
 }
 
 .to-follow {
-    margin-left: 10px;
+
+    width: 400px;
 }
 
-#following-video {
-    padding-bottom: 20px; 
+.following-video {
+    padding: 10px; 
+
 }
 
 .format-video-main {
@@ -120,4 +134,9 @@ h2 {
 #logo {
     width: 60px;
     align-items: top;
+}
+
+#comment{
+padding-top: 10px;
+padding-right: 80px;
 }
